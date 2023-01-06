@@ -1,0 +1,150 @@
+
+<form [formGroup]="formLogin" >
+    <div class="row py-4">
+        <div class="col text-center">
+            <h2>FORMULARIO PARA CREAR UN CV</h2>
+        </div>
+    </div>
+<div class="row">
+    <h5>DATOS PERSONALES//</h5>
+    <div class="col py-3">
+        <label for="">Ingrese su nombre completo:</label>
+        <input class="form-control" type="text" formControlName="msg" [(ngModel)]="nombre">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label for="">Ingrese su apellido completo:</label>
+        <input class="form-control" type="text" formControlName="msg" [(ngModel)]="apellido">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label for="">Ingrese su edad:</label>
+        <input class="form-control" type="number" formControlName="msg" [(ngModel)]="edad">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label for="">Ingrese su numero personal:</label>
+        <input class="form-control" type="number" formControlName="msg" [(ngModel)]="celular">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label for="">Ingrese su correo personal:</label>
+        <input class="form-control" type="email" formControlName="email" [(ngModel)]="correo">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label for="">Ingrese su direcciòn:</label>
+        <input class="form-control" type="text" formControlName="msg" [(ngModel)]="direccion">
+    </div>
+</div>
+<div class="row py-4">
+    <div class="col">
+     <label  for="radiobutton">Sexo:</label><br>
+        <input class="form-check-input" type="radio" value="Masculino" name="radiobutton" formControlName="option" (change)="radiochange($event)">Masculino
+        <input class="form-check-input" type="radio" value="Femenino"  name="radiobutton" formControlName="option" (change)="radiochange($event)">Femenino
+    </div>
+</div>
+<div class="row py-2">
+    <div class="col">
+        <label for="">Ingrese una breve descripciòn sobre usted:</label>
+        <textarea class="form-control" id="" cols="30" rows="10"  [(ngModel)]="biografia" name="biografia" formControlName="msg"></textarea>
+     </div>
+</div>
+<div class="row py-3">
+    <h5>CONOCIMIENTOS ADQUIRIDOS//</h5>
+    <div class="col py-1">
+        <label for="">Ingrese algun conocimiento que poseas:</label>
+        <input class="form-control" type="text" formControlName="msg"  [(ngModel)]="Curso1">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label for="">Da una breve descripciòn</label>
+        <textarea class="form-control" name="" id="" cols="30" rows="10" formControlName="msg"  [(ngModel)]="Curso1desc"></textarea>
+    </div>
+</div>
+<div class="row py-3">
+    <div class="col">
+        <label for="">Ingrese algun conocimiento que poseas:</label>
+        <input class="form-control" type="text" formControlName="msg" [(ngModel)]="Curso2"> 
+    </div>
+</div>
+<div class="row ">
+    <div class="col">
+        <label for="">Da una breve descripciòn</label>
+        <textarea class="form-control" name="" id="" cols="30" rows="10" formControlName="msg" [(ngModel)]="Curso2desc"></textarea>
+    </div>
+</div>
+<div class="row py-5">
+    <label for="">Ingresa algunas carreras tecnicas que poseas:</label>
+    <div class="col py-3">
+        <input placeholder="ingresa aqui una carrera tecnica" class="form-control" type="text" formControlName="msg" [(ngModel)]="tecnico1"><br>
+        <input placeholder="ingresa aqui una carrera tecnica" class="form-control" type="text" formControlName="msg" [(ngModel)]="tecnico2"><br>
+        <input placeholder="ingresa aqui una carrera tecnica" class="form-control" type="text" formControlName="msg" [(ngModel)]="tecnico3"><br>
+        <input placeholder="ingresa aqui una carrera tecnica" class="form-control" type="text" formControlName="msg" [(ngModel)]="tecnico4"> 
+    </div>
+</div>
+<div class="row">
+    <h5>ESTUDIOS//</h5>
+    <div class="col py-2">
+        <label for="">Selecciona el grado de sus Estudios:</label>
+        <select class="form-select" name="estudios" id="" (change)="listado($event)" formControlName="option">
+            <option value="Sin culminar estudios superiores">Sin culminar estudios superiores</option>
+            <option value="Primaria completa">Primaria completa</option>
+            <option value="Secundaria completa">Secundaria completa</option>
+            <option value="Universidad culminada">Universidad culminada</option>
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label for="">Fecha de inicio de sus estudios: (año)</label>
+        <input placeholder="ingresa solo el año ejem:2020" class="form-control" type="number" formControlName="msg" [(ngModel)]="fechaEstudiosInicio"> 
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label for="">Fecha de conclusiòn de sus estudios: (año)</label>
+        <input placeholder="ingresa solo el año ejem:2025" class="form-control" type="number" formControlName="msg" [(ngModel)]="fechaEstudiosFinal"> 
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label for="">Lugar donde curso sus estudios:</label>
+        <input class="form-control" type="text" formControlName="msg" [(ngModel)]="EstudiosLugar"> 
+    </div>
+</div>
+<div class="row py-4">
+    <h5>EXPERIENCIA//</h5>
+    <div class="col py-1">
+        <label for="">Trabajaste en alguna Empresa nombrala aqui:</label>
+        <input class="form-control" type="text" formControlName="msg" [(ngModel)]="XPtrabj"> 
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label for="">Lugar de trabajo:</label>
+        <input class="form-control" type="text" formControlName="msg" [(ngModel)]="lugarTrabj"> 
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label for="">tiempo trabajando:</label>
+        <input class="form-control" type="text" formControlName="msg" [(ngModel)]="TimeTrabj"> 
+    </div>
+</div>
+<div class="col">
+    <label for="">Da una breve descripciòn</label>
+    <textarea class="form-control" name="" id="" cols="30" rows="10" formControlName="msg" [(ngModel)]="descTrabj"></textarea>
+</div>
+<div class="row py-3 text-center">
+    <div class="col">
+        <button class="btn btn-outline-warning" type="submit" (click)="enviar()" [disabled]="formLogin.invalid">Enviar</button>
+    </div>
+</div>
+</form>

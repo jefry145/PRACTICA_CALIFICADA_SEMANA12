@@ -1,0 +1,113 @@
+<div id="inner" *ngIf="show; else elseBlock">
+    <div id="bd">
+        <div id="hd">
+        <div class="yui-gc">
+            <div class="yui-u first">
+                <h1>{{nombre}} {{apellido}}</h1>
+            </div>
+
+            <div class="yui-u">
+                <div class="contact-info">
+                    <h3>Residencia: {{direccion}}</h3> 
+                    <h2><a href="">{{correo}}</a></h2> 
+                    <h3>Telf: (+51)-{{celular}}</h3>
+                    <h4>Sexo: {{sexo}}</h4>
+                    <h5>Edad: {{edad}}</h5>
+                </div><!--// .contact-info -->
+            </div>
+        </div><!--// .yui-gc -->
+    </div>
+    <div id="yui-main">
+            <div class="yui-b">
+
+                <div class="yui-gf">
+                    <div class="yui-u first">
+                        <h2>Perfil</h2>
+                    </div>
+                    <div class="yui-u">
+                        <p class="enlarge">
+                         {{biografia}}
+                        </p>
+                    </div>
+                </div><!--// .yui-gf -->
+
+                <div class="yui-gf">
+                    <div class="yui-u first">
+                        <h2>Conocimientos</h2>
+                    </div>
+                    <div class="yui-u">
+
+                            <div class="talent">
+                                <h2>{{curso1}}</h2>
+                                <p>{{descripcioncurso1}}</p>
+                            </div>
+
+                            <div class="talent">
+                                <h2>{{curso2}}</h2>
+                                <p>{{descripcioncurso2}}</p>
+                            </div>
+
+                    </div>
+                </div><!--// .yui-gf -->
+
+                <div class="yui-gf">
+                    <div class="yui-u first">
+                        <h2>Tecnico</h2>
+                    </div>
+                    <div class="yui-u">
+                        <ul class="talent">
+                            <li>{{tecnico1}}</li>
+                            <li>{{tecnico2}}</li>
+                            <li class="last">{{tecnico3}}</li>
+                        </ul>
+
+                        <ul class="talent">
+                            <li>{{tecnico4}}</li>
+                        </ul>
+                    </div>
+                </div><br><!--// .yui-gf-->
+
+                <div class="yui-gf">
+
+                    <div class="yui-u first">
+                        <h2>Experience</h2>
+                    </div><!--// .yui-u -->
+
+                    <div class="yui-u">
+
+                        <div class="job">
+                            <h2>{{Trabajo}}</h2>
+                            <h3>{{LugarTrabj}}</h3>
+                            <h4>{{TimeTrabj}}</h4>
+                            <p>{{descripcionDeTrabajo}}</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="yui-gf last">
+                    <div class="yui-u first">
+                        <h2>Educaciòn:</h2>
+                    </div>
+                    <div class="yui-u">
+                        <h2>{{Niveleducativo}}</h2>
+                        <h3>{{lugarDeEstudio}} — <strong>{{fechaInicioEstudio}}-{{fechaFinalEstudio}}</strong> </h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!--// footer -->
+    <div id="ft">
+        <p>{{nombre}} {{apellido}} — <a href="">{{correo}}</a> — (+51){{celular}} -</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col px-5">
+        <ng-template #elseBlock><span id="textfail" class="text-danger">Te falta rellenar el formulario</span><br>
+            <button class="btn btn-outline-success" (click)="mostrar()">Mostrar CV</button>
+    </ng-template>
+    </div>
+
+</div>
+

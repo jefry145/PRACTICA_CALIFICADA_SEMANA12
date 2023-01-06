@@ -1,0 +1,10 @@
+button{
+    margin: -20px 0;
+    box-shadow: 0px 1px 4px 1px rgb(63, 108, 255);
+    font-weight: 900;
+}
+#reenvio{
+    box-shadow: 0px 1px 12px 2px rgb(255, 119, 119);
+    font-weight: 600;
+    width: 180px;
+}

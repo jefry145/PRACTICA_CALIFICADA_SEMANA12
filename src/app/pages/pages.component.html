@@ -1,0 +1,19 @@
+
+<div class="row">
+    <div class="col px-5 font-monospace" *ngIf="show; else elseBlock">
+        <app-form (Pasardatospadre)="obtenerdatos($event)"></app-form>
+        <div class="col text-center">
+            <button class="btn btn-outline-primary" type="button" (click)="show=!show">mostrar CV creado</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <ng-template #elseBlock>
+            <app-vista [textohijo2]="pasarDatosHijo"></app-vista>
+            <div class="col py-1 text-center">
+                <button class="btn btn-outline-danger" id="reenvio" type="reset" (click)="show=!show">Hacer otro formulario</button>
+            </div>
+        </ng-template>
+    </div>
+</div>
